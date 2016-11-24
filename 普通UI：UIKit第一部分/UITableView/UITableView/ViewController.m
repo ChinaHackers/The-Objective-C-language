@@ -18,12 +18,25 @@
 @implementation ViewController
 
 // 定义一个数组,作为表格控件的数据来源
-NSMutableArray *array;
+NSMutableArray *dataArray;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // 设置导航栏背景色
+//    [self.navigationController.navigationBar.barTintColor] = [UIColor redColor]
     
-    array = [[NSMutableArray alloc] initWithObjects: @"孙悟空", @"猪八戒", @"牛魔王", @"蜘蛛精", @"白骨精", @"唐僧", @"如来", nil];
+     // 修改导航栏 文字 大小 \ 颜色
+    [self.navigationController.navigationBar setTitleTextAttributes: @{NSFontAttributeName: [UIFont systemFontOfSize:18],NSForegroundColorAttributeName:[UIColor whiteColor]}];
+      
+    
+    //初始化数据，这一次数据，我们放在属性列表文件里
+    //读取plist文件路径, 将plist内容放到 Array 中
+//    ctrlnames = NSArray(contentsOfFile: Bundle.main.path(forResource: "Property", ofType: "plist")!) as? Array
+  
+    dataArray = [NSMutableArray arrayWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"Property" ofType:@"plist"]];
+
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     // 设置表格视图的代理\数据源协议 为当前视图控制器类
     self.table.delegate = self;
@@ -35,7 +48,7 @@ NSMutableArray *array;
 // 每一组多少行
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [array count];
+    return [dataArray count];
  
 }
 
@@ -65,10 +78,10 @@ NSMutableArray *array;
     NSInteger rowNo = [indexPath row];
     
     // 设置textLabel显示的文本
-    cell.textLabel.text = [array objectAtIndex:rowNo];
+    cell.textLabel.text = [dataArray objectAtIndex:rowNo];
     
     // 设置详细说明显示的文本
-    cell.detailTextLabel.text = @"西游降魔传";
+    cell.detailTextLabel.text = [dataArray objectAtIndex:rowNo];
 
 /*
  // 设置cell右边辅助按钮的样式
@@ -105,7 +118,7 @@ NSMutableArray *array;
     return UITableViewCellEditingStyleDelete;
 }
 
-// MARK: -  响应单元格的删除事件
+// MARK: - 响应单元格的删除事件
 
 // 开启在Cell中滑动删除, 显示删除按钮，必须实现以下方法:
 // 点击当点击delete后执行的删除过程
@@ -123,7 +136,7 @@ NSMutableArray *array;
         NSInteger index = [indexPath row];
         
         // 从数组中将该单元格的内容清除, 以保证 单元格 的一致性
-        [array removeObjectAtIndex:index];
+        [dataArray removeObjectAtIndex:index];
         
     }
     // 然后删除单元格在表格中指定的行, 删除时带动画效果
@@ -134,12 +147,6 @@ NSMutableArray *array;
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     return @"删除";
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
