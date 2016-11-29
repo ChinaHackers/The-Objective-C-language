@@ -1,5 +1,4 @@
-
-![image](http://pic.baike.soso.com/p/20140619/20140619093545-1024299955.jpg)
+![](http://www.ucai.cn/data/uploads/course/54be18310711d.jpg)
 
 
 ![](https://img.shields.io/travis/rust-lang/rust/master.svg)
