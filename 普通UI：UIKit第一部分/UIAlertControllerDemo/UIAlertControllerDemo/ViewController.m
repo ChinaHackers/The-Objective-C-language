@@ -23,7 +23,7 @@
 
 - (IBAction)clicked:(UIButton *)sender {
     
-    // UIAlertcontroller
+    //MARK: - UIAlertcontroller(警告控制器)
     
     UIAlertController *alet = [UIAlertController alertControllerWithTitle:@"文本输入框" message:@"登录和密码提示框实例" preferredStyle: UIAlertControllerStyleAlert];
     
@@ -50,15 +50,6 @@
     //弹出提示框
     [self presentViewController:alet animated:true completion:nil];
   
-}
-          
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-    
-    
-    
 }
 
 @end

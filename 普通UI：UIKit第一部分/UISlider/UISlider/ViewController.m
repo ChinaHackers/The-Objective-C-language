@@ -17,8 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     // 滑块(UISlider)
+    [self UISlider_Demo];
+    
+    
+}
+
+//MARK: - 滑块(UISlider)
+- (void)UISlider_Demo {
+    
     
     // 滑块的创建
     UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(20, 60, 280, 50)];
@@ -50,9 +57,9 @@
     // 通过 minimumValueImage 和 maximumValueImage 2个属性向滑块左右俩边增加图标
     slider.minimumValueImage = [UIImage imageNamed:@"volume-down"];
     slider.maximumValueImage = [UIImage imageNamed:@"volume-up"];
-
+    
     // 设置滑块的图片
-   // [slider setThumbImage:[UIImage imageNamed:@"8890"] forState:UIControlStateNormal];
+    // [slider setThumbImage:[UIImage imageNamed:@"8890"] forState:UIControlStateNormal];
     
     self.view.backgroundColor = [UIColor lightTextColor];
     
@@ -60,6 +67,7 @@
     [slider addTarget:self action:@selector(sliderChange:) forControlEvents:UIControlEventValueChanged];
     
     [self.view addSubview:slider];
+
     
 }
 
@@ -68,11 +76,6 @@
     
     NSLog(@"%.2f",slider.value);
     
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

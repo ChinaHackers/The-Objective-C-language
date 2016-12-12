@@ -45,15 +45,14 @@ NSMutableArray *dataArray;
 
 //MARK: - UItableView Data Source
 
-// 每一组多少行
+// MARK: 每个分区有多少行数据
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return [dataArray count];
  
 }
 
-// MARK - 每一行显示的具体内容
-
+// MARK: 每一行显示的具体内容
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     //为了提供表格显示性能，已创建完成的单元需重复使用
@@ -102,23 +101,21 @@ NSMutableArray *dataArray;
 }
 //MARK: - UItableView Delegate
 
-// 开启编辑模式
-
+//MARK: 开启编辑模式
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     
     return YES;
 
 }
 
-//MARK: -  设置单元格的编辑模式
-
+//MARK: 设置单元格的编辑模式
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     // 设置编辑模式为删除
     return UITableViewCellEditingStyleDelete;
 }
 
-// MARK: - 响应单元格的删除事件
+// MARK: 响应单元格的删除事件
 
 // 开启在Cell中滑动删除, 显示删除按钮，必须实现以下方法:
 // 点击当点击delete后执行的删除过程

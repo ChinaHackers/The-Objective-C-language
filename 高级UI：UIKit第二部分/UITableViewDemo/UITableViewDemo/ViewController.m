@@ -204,10 +204,4 @@ UITableView *table;
     
     return 30;
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 @end

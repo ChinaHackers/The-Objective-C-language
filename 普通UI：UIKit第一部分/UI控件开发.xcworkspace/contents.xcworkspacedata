@@ -2,13 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:UITableViewDemo/UITableViewDemo.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:UITextField/UITextField.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:UITableView/UITableView.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:UIStepper/UIStepper.xcodeproj">

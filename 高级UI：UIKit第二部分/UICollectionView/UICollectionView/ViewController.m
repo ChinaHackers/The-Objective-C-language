@@ -97,9 +97,6 @@ NSString *identify = @"cell";
 
 // 初始化\返回集合视图的单元格
 // 每一行 cell 的显示具体内容
-
-
-
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     

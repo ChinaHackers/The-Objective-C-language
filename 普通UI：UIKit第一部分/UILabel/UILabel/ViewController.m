@@ -17,7 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 标签(UILabel)
+    // 标签(UILabel)的使用
+    [self UILabel_Demo];
+   
+}
+
+#pragma mark 标签(UILabel)的使用
+- (void)UILabel_Demo {
+
     // 创建 UILabel 对象
     UILabel *label = [[UILabel alloc] init];
     
@@ -25,7 +32,7 @@
     label.frame = CGRectMake(20, 100, 280, 100);
     
     // 设置 label 文字
-    label.text = @"The Swift Programming Language is Fun !";
+    label.text = @"iOS SDK";
     
     // 添加到视图中
     [self.view addSubview:label];
@@ -73,7 +80,7 @@
     // 通过font属性，可以设置文字的字体
     
     // 该属性值为 UIfont 对象，如果找不到定义的字体，将会使用系统默认的字体、大小。
-    label.font = [UIFont fontWithName:@"Bodoni 72" size:20];
+    label.font = [UIFont boldSystemFontOfSize:60];
     
     // 标签文字的省略方式
     // 当标签的文字超过了容器的宽度时,隐藏尾部的文字,并显示省略号.
@@ -81,14 +88,14 @@
     // 通过 linBreakMode 属性设置省略方式
     /*
      属性值可以为:
-        NSLineBreakMode.NSLineBreakByWordWrapping       按照单词换行
-        NSLineBreakMode.NSLineBreakByTruncatingTail     隐藏尾部文字,并显示省略号
-        NSLineBreakMode.NSLineBreakByTruncatingMiddle   隐藏中间文字,并显示省略号
-        NSLineBreakMode.NSLineBreakByTruncatingHead     隐藏头部文字,并显示省略号
-        NSLineBreakMode.NSLineBreakByClipping           截取多于的部分，并不显示省略号
-        NSLineBreakMode.NSLineBreakByCharWrapping        按照字符换行
-    
-    */
+     NSLineBreakMode.NSLineBreakByWordWrapping       按照单词换行
+     NSLineBreakMode.NSLineBreakByTruncatingTail     隐藏尾部文字,并显示省略号
+     NSLineBreakMode.NSLineBreakByTruncatingMiddle   隐藏中间文字,并显示省略号
+     NSLineBreakMode.NSLineBreakByTruncatingHead     隐藏头部文字,并显示省略号
+     NSLineBreakMode.NSLineBreakByClipping           截取多于的部分，并不显示省略号
+     NSLineBreakMode.NSLineBreakByCharWrapping        按照字符换行
+     
+     */
     
     label.lineBreakMode = NSLineBreakByTruncatingMiddle;
     
@@ -106,12 +113,7 @@
     
     // 设置标签中的文字行数: 0 ( 0:不限制行数 )
     // label.numberOfLines = 0;
-   
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 @end

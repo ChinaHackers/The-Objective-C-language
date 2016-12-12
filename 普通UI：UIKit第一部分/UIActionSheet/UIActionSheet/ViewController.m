@@ -18,19 +18,14 @@
     [super viewDidLoad];
     
     
-    // 动作表 ActionSheet
-    
-    
+    //MARK: - 动作表 ActionSheet
     // 创建一个按钮, 点击按钮时,弹出警告窗口
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
     
     //设置按钮的位置
-//    btn.frame = CGRectMake(120, 166, 120, 30)
-    
     btn.frame = CGRectMake(120, 166, 120, 30);
     
     //设置按钮在正常状态下的标题文字
-    
     [btn setTitle:@"弹出警告框" forState:UIControlStateNormal];
     
     //设置按钮字体\大小
@@ -50,7 +45,6 @@
 #pragma mark - 显示 ActionSheet
 - (void)show:(UIButton *)button {
 
-    
     // 3.操作表的使用 ( UIActionSheet )
     
     UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"请选择学习语言" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
@@ -86,10 +80,7 @@
     [actionSheet addAction:ThreeButton];
     [actionSheet addAction:cancelButton];
     
-    
     [self presentViewController:actionSheet animated:YES completion:nil];
-
-
 }
 
 

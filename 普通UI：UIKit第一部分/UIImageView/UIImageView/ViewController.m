@@ -21,8 +21,15 @@ NSArray *array;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // UIImageView (图像组件)
+    // UIImageView 的使用
+    [self UIImageView_Demo];
+
+}
+
+#pragma mark UIImageView 的使用
+- (void)UIImageView_Demo {
     
+    // UIImageView (图像组件)
     // 创建一个NSArray集合，其中集合元素都是UIImage对象
     array = [NSArray arrayWithObjects: [UIImage imageNamed:@"lijiang.jpg"],
              [UIImage imageNamed:@"qiao.jpg"],
@@ -38,13 +45,7 @@ NSArray *array;
     
     // 让iv控件开始播放动画
     [self.images startAnimating];
-    
 
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
 }
 
 @end
