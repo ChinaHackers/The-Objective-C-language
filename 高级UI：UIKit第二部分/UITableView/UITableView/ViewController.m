@@ -55,7 +55,7 @@ NSMutableArray *dataArray;
 // MARK: 每一行显示的具体内容
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    //为了提供表格显示性能，已创建完成的单元需重复使用
+    // 定义一个循环标识, 为了提供表格显示性能，已创建完成的单元需重复使用
     NSString *str = @"cell";
     
     //初始化cell并指定其类型，也可自定义cell

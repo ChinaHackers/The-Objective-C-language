@@ -24,6 +24,14 @@ NSString *identify = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // MARK: UICollectionView (网格控制器)
+    [self UICollectionView_Demo];
+}
+
+
+- (void)UICollectionView_Demo {
+    
+    
     // =============================
     // UICollectionView (网格控制器)
     // =============================
@@ -36,7 +44,7 @@ NSString *identify = @"cell";
      UICollectionView 的layout 属性: 支持 Flow\ Custom 2中布局方式
      
      UICollectionViewFlowLayout: 指定 UICollectionView 布局方式支持横排\纵排 -> 网格
-    */
+     */
     
     // 创建 UICollectionViewFlowLayout 布局对象
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
@@ -46,8 +54,8 @@ NSString *identify = @"cell";
     
     // 设置 UICollectionView 布局方向
     /*
-        UICollectionViewScrollDirectionHorizontal      : 水平
-        UICollectionViewScrollDirectionVertical        : 垂直
+     UICollectionViewScrollDirectionHorizontal      : 水平
+     UICollectionViewScrollDirectionVertical        : 垂直
      */
     
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
@@ -74,12 +82,12 @@ NSString *identify = @"cell";
     
     [self.view addSubview:collectionView];
     
-    
+
 }
 
-//=================================
-//MARK: - UICollectionView Delegate
-//=================================
+//====================================
+//MARK: - UICollectionView DataSource
+//====================================
 
 // 一共有多少组数据
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -124,12 +132,6 @@ NSString *identify = @"cell";
     
     return cell;
     
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

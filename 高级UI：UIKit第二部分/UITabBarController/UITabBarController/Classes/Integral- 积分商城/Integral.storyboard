@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="c2A-ja-PYH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--积分商城-->
+        <scene sceneID="Aih-jX-PhC">
+            <objects>
+                <viewController id="HxS-g0-HZx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DKw-DD-zWj"/>
+                        <viewControllerLayoutGuide type="bottom" id="GCj-yp-9RD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WBE-YW-lvK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="积分商城" id="jdq-OY-8Cf"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EiG-d6-D6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="256.80000000000001" y="830.73463268365822"/>
+        </scene>
+        <!--积分商城-->
+        <scene sceneID="tfM-kJ-sMP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c2A-ja-PYH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="积分商城" image="home_tab_point_btn" selectedImage="home_tab_point_selected_btn" id="z4i-aR-x66"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ffu-Lw-8bJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HxS-g0-HZx" kind="relationship" relationship="rootViewController" id="5Xy-Ph-HQc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5RT-Vr-A9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-682.39999999999998" y="830.73463268365822"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home_tab_point_btn" width="63" height="49"/>
+        <image name="home_tab_point_selected_btn" width="63" height="49"/>
+    </resources>
+</document>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LEV-mQ-s3u">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--个人中心-->
+        <scene sceneID="meN-8k-Sdi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LEV-mQ-s3u" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="个人中心" image="home_tab_personal_btn" selectedImage="home_tab_personal_selected_btn" id="VpO-01-QEb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ur7-cl-Ud8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lgp-Yj-tGS" kind="relationship" relationship="rootViewController" id="ukh-7s-pDx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ll-c4-nCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-162.40000000000001" y="335.98200899550227"/>
+        </scene>
+        <!--个人中心-->
+        <scene sceneID="jfr-lj-kX0">
+            <objects>
+                <viewController id="lgp-Yj-tGS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ycc-V6-UO5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tvy-Rj-oRM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WUQ-Yj-pCG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="个人中心" id="5DP-xI-5aT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mMl-ki-ENF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="582" y="336"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home_tab_personal_btn" width="63" height="49"/>
+        <image name="home_tab_personal_selected_btn" width="63" height="49"/>
+    </resources>
+</document>
